@@ -14,7 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
+            //create table for customers
             $table->id();
+            $table->string('name');
+            $table->string('type'); //individual or business
+            $table->string('email');
+            $table->string('address');
+            $table->string('city');
+            $table->string('state');
+            $table->string('zip');
+
             $table->timestamps();
         });
     }
